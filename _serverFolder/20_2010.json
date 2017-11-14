@@ -1,0 +1,25 @@
+{ 
+	"_id" : { 
+		"$oid" : "58228ef72a9288eaa740ffed" 
+	}, 
+	"resourceType" : "Patient",
+	"id" : "20_2010",
+	"identifier" : [{
+		"value" : "20_2010"
+	}],
+	"name" : [{
+		"use" : "official",
+		"family" : ["Washington"],
+		"given" : ["George"]
+	}],
+	"gender" : "male",
+	"birthDate" : "1927-11-27",
+	"address" : [{ 
+		"use" : "home",
+		"type" : "both",
+		"line" : ["456 Estate Street"],
+		"city" : "Chicago",
+		"state" : "IL",
+		"postalCode" : "12345" 
+	}] 
+ }

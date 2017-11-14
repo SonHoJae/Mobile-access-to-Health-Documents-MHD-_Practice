@@ -1,0 +1,104 @@
+{
+  "resourceType" : "Bundle",
+  "meta" : {
+    "profile" : [ "http://ihe.net/fhir/tag/iti-65" ]
+  },
+  "type" : "transaction",
+  "entry" : [ {
+    "fullUrl" : "urn:uuid:4e84028e-6c09-429e-998f-d8ab3c18d1a3",
+    "resource" : {
+      "resourceType" : "DocumentManifest",
+      "subject" : {
+        "reference" : "Patient/202"
+      },
+      "recipient" : [ {
+        "reference" : "Practitioner/1"
+      } ],
+      "type" : {
+        "text" : "Skull and Facial bones and Mandible X-ray for dental measurement"
+      },
+      "author" : [ {
+        "reference" : "Practitioner/1"
+      } ],
+      "identifier" : [ {
+        "system" : "urn:oid:1.2.410.19376.3",
+        "value" : "urn:uuid:4e84028e-6c09-429e-998f-d8ab3c18d1a3"
+      } ],
+      "created" : "2016-10-19T11:03:58+09:00",
+      "status" : "current",
+      "description" : "Wisdom tooth extraction progress note",
+      "content" : [ {
+        "pReference" : {
+          "reference" : "urn:uuid:898eb19f-fea3-4fde-8af7-bd1e3234636c"
+        }
+      } ]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "DocumentManifest"
+    }
+  }, {
+    "fullUrl" : "urn:uuid:898eb19f-fea3-4fde-8af7-bd1e3234636c",
+    "resource" : {
+      "resourceType" : "DocumentReference",
+      "subject" : {
+        "reference" : "Patient/202"
+      },
+      "type" : {
+        "text" : "Dental X-rays and other images (not DICOM)"
+      },
+      "author" : [ {
+        "reference" : "Practitioner/1"
+      } ],
+      "custodian" : {
+        "reference" : "Organization/1"
+      },
+      "authenticator" : {
+        "reference" : "Organization/1"
+      },
+      "masterIdentifier" : {
+        "system" : "urn:oid:1.2.410.19376.3",
+        "value" : "urn:uuid:d93d085f-24c5-49d6-a161-e70dd1c9f024"
+      },
+      "created" : "2016-10-19T11:03:58+09:00",
+      "indexed" : "2016-10-19T11:03:58+09:00",
+      "status" : "current",
+      "description" : "Dental",
+      "securityLabel" : [ {
+        "coding" : [ {
+          "system" : "http://hl7.org/fhir/v3/Confidentiality",
+          "code" : "V",
+          "display" : "very restricted"
+        } ]
+      } ],
+      "content" : [ {
+        "attachment" : {
+          "contentType" : "application/xml",
+          "url" : "urn:uuid:d93d085f-24c5-49d6-a161-e70dd1c9f024",
+          "size" : 46001,
+          "hash" : "ZABHIA2ZNDmA1owkjRguCMtJcNs="
+        },
+        "format" : [ {
+          "system" : "urn:oid:1.3.6.1.4.1.19376.1.2.3",
+          "code" : "urn:ihe:pcc:xds-ms:2007",
+          "display" : "XDS Medical Summaries"
+        } ]
+      } ]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "DocumentReference"
+    }
+  }, {
+    "fullUrl" : "urn:uuid:d93d085f-24c5-49d6-a161-e70dd1c9f024",
+    "resource" : {
+      "resourceType" : "Binary",
+      "contentType" : "image/jpeg",
+      "content" : "base64encoded"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Patient"
+    }
+  } ]
+}
